@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>html_tips</title>
+
+    <body>
+        <h1>There are some HTML tips</h1>
+
+        <h3>An Ordered List:</h3>
+        <ol>
+            <li>First Item</li>
+            <li>Second Item</li>
+            <li>Third Item</li>
+        </ol>
+
+        <h3>An Unordered List:</h3>
+        <ul>
+            <li>One Item</li>
+            <li>Another Item</li>
+        </ul>
+
+        <h3>Image</h3>
+        <img src="{{ url_for('static', filename='images/fox.jpg')}}" alt="Fox", width="600">
+
+        <h3>Link</h3>
+        <a href="https://google.com">Google It</a>
+        <a href="/about/">About me</a> 
+
+        <h3>Table</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ocean</th>
+                    <th>Average</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pacific Ocean</td>
+                    <td>100m</td>
+                    <td>200m</td>
+                </tr>
+                <tr>
+                    <td>Atlantic Ocean</td>
+                    <td>100m</td>
+                    <td>200m</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Form</h3>
+        <form action="/greet">
+            <div>
+                <input type="text" placeholder="Full Name" autofocus autocomplete="off" name="full_name">
+                <input type="password" name="password" placeholder="Password">
+                <input type="submit">                
+            </div>
+
+            <div>
+                Favorite colors?
+                <input name="color" type="radio" value="red"> Red
+                <input name="color" type="radio" value="green"> Green
+                <input name="color" type="radio" value="blue"> Blue
+            </div>
+
+            <div >
+                <input name="country" list="countries" placeholder="Country">
+                <datalist id="countries">
+                    <option value="US">
+                    <option value="Canada">
+                </datalist>
+            </div>
+
+        </form>
+
+    </body>
+
+</html>
